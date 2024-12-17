@@ -24,11 +24,9 @@ public class PlaceService {
 
     }
 
-    public Place addPlace(){
+    public Place addPlace(Place place){
 
-        return new Place(
-
-        )
+        return repository.add(place);
     }
 
 

@@ -25,7 +25,7 @@ public class PlaceController {
         return service.getPlace(id);
     }
     @PostMapping("/")
-    public Place createPlace(){
-        return service.addPlace();
+    public Place createPlace(Place Place){
+        return service.addPlace(new Place());
     }
 }

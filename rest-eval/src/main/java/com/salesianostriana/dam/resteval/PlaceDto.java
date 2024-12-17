@@ -8,17 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Builder
-public record PlaceDto {
-
-    private Long id;
-    private String nombre;
-    private String calle;
-    private String ciudad;
-    private String latitud;
-    private String longitud;
-    private String descripcion;
-    private List<String> tags;
-    private String urlImagen;
+public record PlaceDto (Long id,String nombre,String calle,String ciudad,String latitud,String longitud,String descripcion,List<String> tags,String urlImagen){
 
     public PlaceDto toPlaceDto(Place place){
        place.setAddress(calle + ", " + ciudad);
